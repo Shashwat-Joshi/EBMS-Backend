@@ -17,6 +17,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", methods = {RequestMethod.POST})
 public class AuthController {
     private final IConsumerRepository consumerRepository;
     private final IAdminRepository adminRepository;
