@@ -28,7 +28,6 @@ public class AuthController {
         if(consumerRepository.findByEmail(request.getEmail()).isPresent()) {
             return ResponseEntity.status(409).body("Email already in use");
         }
-        request.display();
         final var consumer = Consumer.builder()
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPwd()))
