@@ -14,15 +14,14 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
-        cors-configurations:
+        corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         - id: auth-service
           uri: lb://AUTH-SERVICE
