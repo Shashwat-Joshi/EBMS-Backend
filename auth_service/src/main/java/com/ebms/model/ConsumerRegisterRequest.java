@@ -16,4 +16,16 @@ public class ConsumerRegisterRequest {
     private String fullName;
     private String address;
     private Integer mobile;
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void display() {
+        System.out.println(
+                "MeterNo: " + this.meterNo +
+                        "\nEmail: " + this.email +
+                        "\nPWD: " + this.password
+        );
+    }
 }
