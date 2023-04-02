@@ -31,7 +31,7 @@ public class AuthController {
         request.display();
         final var consumer = Consumer.builder()
                 .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword()))
+                .password(passwordEncoder.encode(request.getPwd()))
                 .fullName(request.getFullName())
                 .address(request.getAddress())
                 .mobileNumber(request.getMobile())

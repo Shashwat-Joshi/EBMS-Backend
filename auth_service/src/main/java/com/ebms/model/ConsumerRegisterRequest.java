@@ -12,20 +12,16 @@ import lombok.NoArgsConstructor;
 public class ConsumerRegisterRequest {
     private Integer meterNo;
     private String email;
-    private String password;
+    private String pwd;
     private String fullName;
     private String address;
     private Integer mobile;
-
-    public String getPassword() {
-        return this.password;
-    }
 
     public void display() {
         System.out.println(
                 "MeterNo: " + this.meterNo +
                         "\nEmail: " + this.email +
-                        "\nPWD: " + this.password
+                        "\nPWD: " + this.pwd
         );
     }
 }
